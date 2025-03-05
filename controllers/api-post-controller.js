@@ -19,7 +19,7 @@ const deletePost = (req, res) => {
     
   }
   
-const getPosts = (res) => {
+const getPosts = (req, res) => {
   Post
     .find()
     .sort({ createdAt: -1})
