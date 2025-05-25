@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
+    <title>Document</title>
+    <link rel="shortcut icon" href="/assets/favicon-CLA_uL6v.svg" type="image/svg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script defer src="./js/accordion.min.js"></script>
+    <script defer src="./js/index.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-BiZWaVW7.css">
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="header__container container flex">
+
+      <button class="burger header__burger btn-reset" tabindex="0">
+        <div class="burger__line"></div>
+        <div class="burger__line"></div>
+        <div class="burger__line"></div>
+      </button>
+
+      <a class="logo header__logo" href="./index.html" tabindex="-1">
+        <picture>
+          <source srcset="/assets/Logo-2x-8oJn5b8I.png">
+          <img class="logo__img" src="data:image/png;base64,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" alt="logo">
+        </picture>
+      </a>
+      <nav class="nav header__nav" title="Основное меню">
+
+        <ul class="list nav__list list-reset flex">
+          <li class="item nav__item">
+            <a href="#about-us" class="link nav__link">
+              О нас
+            </a>
+          </li>
+          <li class="item nav__item">
+            <a href="#" class="link nav__link">
+              Проекты
+            </a>
+          </li>
+          <li class="item nav__item">
+            <a href="#how-work" class="link nav__link">
+              Этапы
+            </a>
+          </li>
+          <li class="item nav__item">
+            <a href="#" class="link nav__link">
+              Отзывы
+            </a>
+          </li>
+          <li class="item nav__item">
+            <a href="#" class="link nav__link">
+              Контакты
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <button id="btn-search" class="btn-reset header__btn-search">
+        <svg class="common-icon" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="7.56126" height="1.89031" transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6064 17.3762)" fill="black"/>
+          <path d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z" stroke="black" stroke-width="2"/>
+        </svg>
+      </button>
+      <div class="search header__search">
+        <input type="text" class="header__field-search" name="field-search" id="field-search" placeholder="Что будем искать?">
+        <button class="btn-reset header__btn-search search__btn">
+          <svg class="common-icon" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="7.56126" height="1.89031" transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6064 17.3762)" fill="black"/>
+            <path d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z" stroke="black" stroke-width="2"/>
+          </svg>
+        </button>
+        <button id="btn-close" class="btn-reset header__btn-close">
+          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="8.9541" y="7.30432" width="11.6645" height="2.33291" transform="rotate(45 8.9541 7.30432)" fill="#CACACA"/>
+            <rect x="7.30469" y="15.5524" width="11.6645" height="2.33291" transform="rotate(-45 7.30469 15.5524)" fill="#CACACA"/>
+            <circle cx="12" cy="12" r="11" stroke="#CACACA" stroke-width="2"/>
+            </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container main__container">
+      <section class="carousel" id="carousel">
+        <div class="swiper carousel__container">
+          <div class="swiper-wrapper">
+            <picture class="swiper-slide">
+              <source media="(max-width: 576px)" srcset="/assets/carousel-320-DakhkeRO.jpg">
+              <source media="(max-width: 768px)" srcset="/assets/carousel-768-8dp_nqMN.jpg">
+              <source media="(max-width: 1024px)" srcset="/assets/carousel-1024-BXPAp-uT.jpg">
+              <img class="swiper-slide carousel__img" src="/assets/carousel-1920-D9WYgcYd.jpg" alt="Слайд">
+            </picture>
+            <picture class="swiper-slide">
+              <source media="(max-width: 576px)" srcset="/assets/carousel-320-BvNxfVu4.jpg">
+              <source media="(max-width: 768px)" srcset="/assets/carousel-768-BEmjt2HS.jpg">
+              <source media="(max-width: 1024px)" srcset="/assets/carousel-1024-8Xa7nXVT.jpg">
+              <img class="swiper-slide carousel__img" src="/assets/carousel-1920-Dh88Z-rL.jpg" alt="Слайд">
+            </picture>
+            <picture class="swiper-slide">
+              <source media="(max-width: 576px)" srcset="/assets/carousel-320-C4jQkUQX.jpg">
+              <source media="(max-width: 768px)" srcset="/assets/carousel-768-DwvXiky2.jpg">
+              <source media="(max-width: 1024px)" srcset="/assets/carousel-1024-9VDcRSNV.jpg">
+              <img class="swiper-slide carousel__img" src="/assets/carousel-1920-BsnbMdXf.jpg" alt="Слайд">
+            </picture>
+          </div>
+          <div class="carousel__content">
+            <h1 class="main-title carousel__title">
+              Проектные решения любой сложности
+            </h1>
+            <p class="carousel__desc">
+              Есть над чем задуматься: базовые сценарии поведения пользователей и&nbsp;по&nbsp;сей день остаются уделом проектантов
+            </p>
+            <button class="btn btn-color carousel__btn btn-reset">
+              Заказать расчёт
+            </button>
+          </div>
+          <div class="swiper-pagination indicator carousel__indicators flex">
+            <span class="indicator__point">
+              <svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="7.5" cy="7.5" r="7.5" fill="white"/>
+              </svg>
+            </span>
+            <span class="indicator__point">
+              <svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="7.5" cy="7.5" r="7.5" fill="white"/>
+              </svg>
+            </span>
+            <span class="indicator__point">
+              <svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="7.5" cy="7.5" r="7.5" fill="white"/>
+              </svg>
+            </span>
+          </div>
+          <div class="swiper-navigation">
+            <button class="swiper-button swiper-button-next"> </button>
+            <button class="swiper-button swiper-button-prev"> </button>
+          </div>
+        </div>
+      </section>
+      <section class="about-us" id="about-us">
+        <div class="about-us__container">
+          <h2 class="about-us__title common-title">
+            О нас
+          </h2>
+          <p class="paragraph about-us__text">
+            Также как перспективное планирование создаёт необходимость включения в&nbsp;производственный план целого ряда внеочередных мероприятий с&nbsp;учётом комплекса экспериментов, поражающих по&nbsp;своей масштабности и&nbsp;грандиозности. А&nbsp;также диаграммы связей могут быть описаны максимально подробно. Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что убеждённость некоторых оппонентов требует от нас анализа как&nbsp;самодостаточных, так и&nbsp;внешне зависимых концептуальных решений! Следует отметить, что&nbsp;высококачественный прототип будущего проекта предопределяет высокую востребованность позиций, занимаемых участниками в&nbsp;отношении поставленных задач. Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что&nbsp;высококачественный прототип будущего проекта способствует повышению качества экспериментов.
+          </p>
+          <div class="about-us__wrapper flex">
+            <div class="left-column about-us__left-column flex">
+              <div class="part left-column__part flex">
+                <p class="part__text paragraph" >
+                  Принимая во&nbsp;внимание показатели успешности, перспективное планирование способствует подготовке и&nbsp;реализации новых принципов
+                </p>
+                <button class="btn about-us__btn btn-reset">
+                  Подробнее
+                </button>
+              </div>
+            </div>
+            <div class="right-column about-us__right-column flex">
+              <div class="item-about-us about-us__item">
+                <div class="item-about-us__content">
+                  <h3 class="about-us__common-title section-common-title">
+                    Консультация с&nbsp;широким активом
+                  </h3>
+                  <p class="paragraph item-about-us__text">
+                    А&nbsp;также свежий взгляд на&nbsp;привычные вещи&nbsp;&mdash; безусловно открывает новые горизонты для&nbsp;как&nbsp;самодостаточных, так и&nbsp;внешне зависимых концептуальных решений
+                  </p>
+                </div>
+              </div>
+              <div class="item-about-us about-us__item">
+                <div class="item-about-us__content">
+                  <h3 class="about-us__common-title section-common-title">
+                    В&nbsp;своём стремлении повысить
+                  </h3>
+                  <p class="paragraph item-about-us__text">
+                    Качество жизни, они забывают, что&nbsp;сплочённость команды профессионалов представляет собой интересный эксперимент проверки прогресса профессионального сообщества
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="how-work" id="how-work">
+        <div class="how-work__container">
+          <h2 class="how-work__title common-title">
+            Как мы работаем
+          </h2>
+          <ul class="list how-work__list list-reset flex">
+            <li class="item how-work__list-item">
+              <button class="btn-step btn-reset" data-path="first">
+                1 шаг
+              </button>
+            </li>
+            <li class="item how-work__list-item">
+              <button class="btn-step btn-reset" data-path="second">
+                2 шаг
+              </button>
+            </li>
+            <li class="item how-work__list-item">
+              <button class="btn-step btn-reset" data-path="third">
+                3 шаг
+              </button>
+            </li>
+            <li class="item how-work__list-item">
+              <button class="btn-step btn-reset" data-path="fourth">
+                4 шаг
+              </button>
+            </li>
+          </ul>
+          <div class="content-how-work how-work__content flex">
+            <div class="left-part how-work__left-part how-work__left-part--active" data-target="first">
+              <h3 class="content-how-work__title section-common-title">
+                Проводим консультацию
+              </h3>
+              <p class="left-part__text paragraph">
+                Влечёт за&nbsp;собой процесс внедрения и&nbsp;модернизации приоритизации разума над&nbsp;эмоциями. В&nbsp;рамках спецификации современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями. <br>
+                А&nbsp;также представители современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью общей картины, реплицированные с&nbsp;зарубежных источников, современные исследования подвергнуты целой серии независимых исследований. Кстати, стремящиеся вытеснить традиционное производство, нанотехнологии освещают чрезвычайно интересные особенности картины в&nbsp;целом, однако конкретные выводы, разумеется, призваны к&nbsp;ответу.
+              </p>
+              <button class="btn btn-color how-work__btn-more btn-reset">
+                Подробнее
+              </button>
+              <button  class="btn how-work__btn-contract btn-reset">
+                Договор
+              </button>
+            </div>
+            <div class="left-part how-work__left-part" data-target="second">
+              <h3 class="content-how-work__title section-common-title">
+                Составляем смету
+              </h3>
+              <p class="left-part__text paragraph">
+                Внедрения и&nbsp;модернизации приоритизации разума над эмоциями. В&nbsp;рамках спецификации современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями. А&nbsp;также представители современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью общей картины, реплицированные с&nbsp;зарубежных источников, современные исследования подвергнуты целой серии независимых исследований.
+              </p>
+              <button class="btn btn-color how-work__btn-more btn-reset">
+                Подробнее
+              </button>
+              <button  class="btn how-work__btn-contract btn-reset">
+                Договор
+              </button>
+            </div>
+            <div class="left-part how-work__left-part" data-target="third">
+              <h3 class="content-how-work__title section-common-title">
+                Привлекаем подрядчиков
+              </h3>
+              <p class="left-part__text paragraph">
+                Идейные соображения высшего порядка, а&nbsp;также новая модель организационной деятельности требует анализа прогресса профессионального сообщества. Высокий уровень вовлечения представителей целевой аудитории является чётким доказательством простого факта: высококачественный прототип будущего проекта напрямую зависит от&nbsp;дальнейших направлений развития. Разнообразный и&nbsp;богатый опыт говорит нам, что новая модель организационной деятельности говорит о&nbsp;возможностях системы массового участия. Принимая во&nbsp;внимание показатели успешности, постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнить важные задания по&nbsp;разработке прогресса профессионального сообщества.
+              </p>
+              <button class="btn btn-color how-work__btn-more btn-reset">
+                Подробнее
+              </button>
+              <button  class="btn how-work__btn-contract btn-reset">
+                Договор
+              </button>
+            </div>
+            <div class="left-part how-work__left-part" data-target="fourth">
+              <h3 class="content-how-work__title section-common-title">
+                Инспектируем все этапы работ
+              </h3>
+              <p class="left-part__text paragraph">
+                Высокий уровень вовлечения представителей целевой аудитории является чётким доказательством простого факта: высококачественный прототип будущего проекта напрямую зависит от&nbsp;дальнейших направлений развития. Разнообразный и&nbsp;богатый опыт говорит нам, что новая модель организационной деятельности говорит
+                о&nbsp;возможностях системы массового участия. Принимая во&nbsp;внимание показатели успешности, постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет.
+              </p>
+              <button class="btn btn-color how-work__btn-more btn-reset">
+                Подробнее
+              </button>
+              <button  class="btn how-work__btn-contract btn-reset">
+                Договор
+              </button>
+            </div>
+            <div class="right-part how-work__right-part">
+              <div class="right-part__img right-part__img--first"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="faq" id="faq">
+        <div class="faq__container">
+          <h2 class="faq__title common-title">
+            Часто задаваемые вопросы
+          </h2>
+          <ul class="accordion accordion-container list faq__list list-reset">
+            <li class="accordion__item item faq__item" tabindex="0">
+              <h3 class="accordion__title">
+                <button class="accordion__button btn-reset" tabindex="-1">
+                  <span class="faq__text section-common-title">Из чего формируется конечная стоимость проекта?</span>
+                  <svg class="faq__icon" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="25" cy="25" rx="25" ry="25" fill="#CACACA"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" fill="black"/>
+                  </svg>
+              </button>
+              </h3>
+              <div class="accordion__spoiler">
+                <p class="accordion__content paragraph">
+                  Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают нас
+                  к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть своевременно верифицированы.
+                  Но&nbsp;высококачественный прототип будущего проекта является качественно новой ступенью первоочередных требований. А&nbsp;ещё некоторые особенности внутренней политики, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и&nbsp;морали. И&nbsp;нет сомнений, что явные признаки победы институционализации призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть указаны как претенденты на&nbsp;роль ключевых факторов.
+                </p>
+                <p class="accordion__content paragraph">
+                  Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут быть призваны к&nbsp;ответу. Явные признаки победы институционализации набирают популярность среди определённых слоёв населения,
+                  а&nbsp;значит, должны быть объединены в&nbsp;целые кластеры себе подобных. Банальные, но&nbsp;неопровержимые выводы,
+                  а&nbsp;также многие известные личности призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть представлены в&nbsp;исключительно положительном свете.
+                </p>
+              </div>
+            </li>
+            <li class="accordion__item item faq__item" tabindex="0">
+              <h3 class="accordion__title">
+                <button class="accordion__button btn-reset" tabindex="-1">
+                  <span class="faq__text section-common-title">У меня есть свой проект. Сможем ли мы его доработать / реализовать?</span>
+                  <svg class="faq__icon" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="25" cy="25" rx="25" ry="25" fill="#CACACA"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" fill="black"/>
+                  </svg>
+              </button>
+              </h3>
+              <div class="accordion__spoiler">
+                <p class="accordion__content paragraph">
+                  Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают нас
+                  к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть своевременно верифицированы.
+                  Но&nbsp;высококачественный прототип будущего проекта является качественно новой ступенью первоочередных требований. А&nbsp;ещё некоторые особенности внутренней политики, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и&nbsp;морали. И&nbsp;нет сомнений, что явные признаки победы институционализации призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть указаны как претенденты на&nbsp;роль ключевых факторов.
+                </p>
+                <p class="accordion__content paragraph">
+                  Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут быть призваны к&nbsp;ответу. Явные признаки победы институционализации набирают популярность среди определённых слоёв населения,
+                  а&nbsp;значит, должны быть объединены в&nbsp;целые кластеры себе подобных. Банальные, но&nbsp;неопровержимые выводы,
+                  а&nbsp;также многие известные личности призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть представлены в&nbsp;исключительно положительном свете.
+                </p>
+              </div>
+            </li>
+            <li class="accordion__item item faq__item" tabindex="0">
+              <h3 class="accordion__title">
+                <button class="accordion__button btn-reset" tabindex="-1">
+                  <span class="faq__text section-common-title">Я выбираю между разными компаниями. В чём ваше отличие?</span>
+                  <svg class="faq__icon" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="25" cy="25" rx="25" ry="25" fill="#CACACA"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" fill="black"/>
+                  </svg>
+              </button>
+              </h3>
+              <div class="accordion__spoiler">
+                <p class="accordion__content paragraph">
+                  Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают нас
+                  к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть своевременно верифицированы.
+                  Но&nbsp;высококачественный прототип будущего проекта является качественно новой ступенью первоочередных требований. А&nbsp;ещё некоторые особенности внутренней политики, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и&nbsp;морали. И&nbsp;нет сомнений, что явные признаки победы институционализации призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть указаны как претенденты на&nbsp;роль ключевых факторов.
+                </p>
+                <p class="accordion__content paragraph">
+                  Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут быть призваны к&nbsp;ответу. Явные признаки победы институционализации набирают популярность среди определённых слоёв населения,
+                  а&nbsp;значит, должны быть объединены в&nbsp;целые кластеры себе подобных. Банальные, но&nbsp;неопровержимые выводы,
+                  а&nbsp;также многие известные личности призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть представлены в&nbsp;исключительно положительном свете.
+                </p>
+              </div>
+            </li>
+            <li class="accordion__item item faq__item" tabindex="0">
+              <h3 class="accordion__title">
+                <button class="accordion__button btn-reset" tabindex="-1">
+                  <span class="faq__text section-common-title">Могу ли я делегировать вам работу / согласование с подрядчиком / организацией?</span>
+                  <svg class="faq__icon" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="25" cy="25" rx="25" ry="25" fill="#CACACA"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" fill="black"/>
+                  </svg>
+              </button>
+              </h3>
+              <div class="accordion__spoiler">
+                <p class="accordion__content paragraph">
+                  Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают нас
+                  к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть своевременно верифицированы.
+                  Но&nbsp;высококачественный прототип будущего проекта является качественно новой ступенью первоочередных требований. А&nbsp;ещё некоторые особенности внутренней политики, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и&nbsp;морали. И&nbsp;нет сомнений, что явные признаки победы институционализации призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть указаны как претенденты на&nbsp;роль ключевых факторов.
+                </p>
+                <p class="accordion__content paragraph">
+                  Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут быть призваны к&nbsp;ответу. Явные признаки победы институционализации набирают популярность среди определённых слоёв населения,
+                  а&nbsp;значит, должны быть объединены в&nbsp;целые кластеры себе подобных. Банальные, но&nbsp;неопровержимые выводы,
+                  а&nbsp;также многие известные личности призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть представлены в&nbsp;исключительно положительном свете.
+                </p>
+              </div>
+            </li>
+            <li class="accordion__item item faq__item" tabindex="0">
+              <h3 class="accordion__title">
+                <button class="accordion__button btn-reset" tabindex="-1">
+                  <span class="faq__text section-common-title">Могу ли я вернуть деньги на каком-либо из этапов работ?</span>
+                  <svg class="faq__icon" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="25" cy="25" rx="25" ry="25" fill="#CACACA"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" fill="black"/>
+                  </svg>
+              </button>
+              </h3>
+              <div class="accordion__spoiler">
+                <p class="accordion__content paragraph">
+                  Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают нас
+                  к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть своевременно верифицированы.
+                  Но&nbsp;высококачественный прототип будущего проекта является качественно новой ступенью первоочередных требований. А&nbsp;ещё некоторые особенности внутренней политики, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и&nbsp;морали. И&nbsp;нет сомнений, что явные признаки победы институционализации призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть указаны как претенденты на&nbsp;роль ключевых факторов.
+                </p>
+                <p class="accordion__content paragraph">
+                  Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут быть призваны к&nbsp;ответу. Явные признаки победы институционализации набирают популярность среди определённых слоёв населения,
+                  а&nbsp;значит, должны быть объединены в&nbsp;целые кластеры себе подобных. Банальные, но&nbsp;неопровержимые выводы,
+                  а&nbsp;также многие известные личности призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть представлены в&nbsp;исключительно положительном свете.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container footer__container flex">
+      <div class="footer__left">
+        <div class="logo-footer footer__logo">
+          <a class="logo-footer__link" href="./index.html" tabindex="-1">
+            <img class="logo-footer__img" src="data:image/png;base64,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" alt="logo">
+          </a>
+        </div>
+        <nav class="nav footer__nav" title="Второстепенное меню">
+          <ul class="list nav__list list-reset flex">
+            <li class="item nav__item">
+              <a href="#about-us" class="link nav__link">
+                О нас
+              </a>
+            </li>
+            <li class="item nav__item">
+              <a href="#" class="link nav__link">
+                Проекты
+              </a>
+            </li>
+            <li class="item nav__item">
+              <a href="#" class="link nav__link">
+                Отзывы
+              </a>
+            </li>
+            <li class="item nav__item">
+              <a href="#" class="link nav__link">
+                Договор оферты
+              </a>
+            </li>
+            <li class="item nav__item">
+              <a href="#" class="link nav__link">
+                Договор подряда
+              </a>
+            </li>
+            <li class="item nav__item">
+              <a href="#" class="link nav__link">
+                Конфиденциальность
+              </a>
+            </li>
+            <li class="item nav__item">
+              <a href="#" class="link nav__link">
+                Партнёрское соглашение
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <a href="https://ok.ru" class="link social-link footer__social-link footer__social-link-ok">
+          <div class="social-link__content">
+            <svg class="common-icon" width="60" height="60" viewbox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M25.7054 19.9812C25.7054 22.4546 27.7105 24.4598 30.1838 24.4598C32.6572 24.4598 34.6623 22.4546 34.6623 19.9812C34.6623 17.5079 32.6572 15.5028 30.1838 15.5028C27.7105 15.5028 25.7054 17.5079 25.7054 19.9812Z" fill="#666666"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M30 60C46.5686 60 60 46.5685 60 30C60 13.4315 46.5686 0 30 0C13.4314 0 0 13.4315 0 30C0 46.5685 13.4314 60 30 60ZM19.35 19.9811C19.35 13.9978 24.2004 9.14729 30.1838 9.14729C36.1673 9.14729 41.0176 13.9978 41.0176 19.9811C41.0176 25.9645 36.1673 30.8154 30.1838 30.8154C24.2004 30.8154 19.35 25.9645 19.35 19.9811ZM41.0823 36.3881C40.9448 36.4983 38.3457 38.5522 34.0085 39.4358L40.5554 45.9243C41.7067 47.0738 41.7081 48.9389 40.5586 50.0902C39.4091 51.2414 37.5444 51.2432 36.3927 50.0935L30.0368 43.904L24.2639 50.0536C23.6859 50.6532 22.9149 50.9547 22.1431 50.9547C21.407 50.9547 20.6703 50.6808 20.0986 50.1296C18.9274 49.0003 18.8935 47.1355 20.0228 45.9643L26.2369 39.4701C21.7782 38.6073 19.0718 36.4998 18.9324 36.3881C17.6633 35.3702 17.4594 33.5163 18.4772 32.247C19.4949 30.9778 21.3487 30.7739 22.6182 31.7916C22.645 31.8133 25.4756 33.9398 30.0366 33.9429C34.5977 33.9398 37.3698 31.8133 37.3966 31.7916C38.666 30.7739 40.5198 30.9778 41.5375 32.247C42.5553 33.5163 42.3515 35.3702 41.0823 36.3881Z" fill="#666666"/>
+              </svg>
+          </div>
+        </a>
+        <a href="https://vk.com" class="link social-link footer__social-link footer__social-link-vk">
+          <div class="social-link__content">
+            <svg class="common-icon" width="60" height="60" viewbox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M30 0C13.432 0 0 13.4314 0 30C0 46.5686 13.432 60 30 60C46.568 60 60 46.5686 60 30C60 13.4314 46.568 0 30 0ZM45.2176 33.2446C46.6159 34.6103 48.0951 35.8957 49.3504 37.4026C49.9065 38.0692 50.4307 38.7585 50.8297 39.5337C51.3993 40.6392 50.8849 41.8515 49.8954 41.9171L43.7494 41.9159C42.162 42.0473 40.8988 41.4071 39.8339 40.3218C38.9837 39.457 38.195 38.5332 37.3762 37.6389C37.0416 37.2718 36.6893 36.9262 36.2695 36.6543C35.4316 36.1093 34.7036 36.2762 34.2236 37.1515C33.7344 38.0421 33.6227 39.0292 33.5761 40.0205C33.5092 41.4697 33.0721 41.8484 31.618 41.9165C28.5109 42.062 25.5628 41.5906 22.8227 40.0241C20.4055 38.6425 18.5346 36.6924 16.9043 34.4845C13.7297 30.1805 11.2984 25.4566 9.11386 20.597C8.6222 19.5026 8.98189 18.917 10.1893 18.8943C12.1952 18.8557 14.2011 18.8606 16.2071 18.8925C17.0234 18.9054 17.5636 19.3725 17.8772 20.1428C18.9612 22.8098 20.2901 25.3473 21.9554 27.7007C22.3992 28.3274 22.8522 28.9522 23.4973 29.3948C24.2093 29.8834 24.7519 29.7219 25.0877 28.9271C25.3025 28.4219 25.3952 27.8817 25.4418 27.3404C25.6014 25.486 25.6205 23.6323 25.3442 21.7854C25.1724 20.6296 24.5224 19.8832 23.3702 19.6647C22.7834 19.5536 22.8694 19.3363 23.1548 19.0011C23.6501 18.4217 24.1142 18.0632 25.0416 18.0632L31.9857 18.062C33.0801 18.2768 33.3256 18.7679 33.4742 19.8703L33.4803 27.5871C33.4674 28.0137 33.6945 29.2782 34.4606 29.5574C35.0744 29.76 35.4795 29.2677 35.8465 28.8792C37.5118 27.112 38.6983 25.0263 39.7608 22.8675C40.2298 21.9155 40.6343 20.9303 41.0271 19.9433C41.3193 19.2135 41.7735 18.8544 42.5972 18.8667L49.2841 18.8747C49.4811 18.8747 49.6812 18.8765 49.8764 18.9103C51.0034 19.103 51.3121 19.5879 50.9635 20.6873C50.4147 22.4145 49.3485 23.8533 48.3063 25.2958C47.1892 26.8401 45.9977 28.3304 44.8917 29.8815C43.8752 31.2994 43.9556 32.0133 45.2176 33.2446Z" fill="#666666"/>
+            </svg>
+          </div>
+        </a>
+      </div>
+      <div class="request footer__request flex">
+        <h2 class="footer__title common-title">
+          Оставить заявку
+        </h2>
+        <form class="form request__form" action="https://jsonplaceholder.typicode.com/posts" method="post" target="_self">
+          <div class="form__container">
+            <div class="request__fild request__name">
+              <input type="text" class="form__field form__name-field" name="name" placeholder="Фамилия, имя и отчество*" required>
+            </div>
+            <div class="request__fild request__email">
+              <input type="email" class="form__field form__email-field" name="email" placeholder="Email*" required>
+            </div>
+            <div class="request__fild request__message">
+              <textarea name="message" id="request-message"
+               class="form__field form__message-field" placeholder="Сообщение"></textarea>
+            </div>
+            <div class="form__send-request">
+              <button class="btn btn-color btn-reset btn-reset" type="submit">
+                Отправить данные
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="footer__right">
+        <p class="footer__text paragraph">
+          Высокий уровень вовлечения представителей целевой аудитории является чётким доказательством простого факта: разбавленное изрядной долей эмпатии, рациональное мышление позволяет оценить значение модели развития. Таким образом, консультация
+          с&nbsp;широким активом обеспечивает широкому кругу (специалистов) участие
+          в&nbsp;формировании стандартных подходов.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
